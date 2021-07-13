@@ -2,14 +2,13 @@ from tkinter import *
 
 
 def mile_to_km():
-    km = int(miles_entry.get())
+    km = float(miles_entry.get())
     miles = "{:.1f}".format(km * 1.609)
-    miles_count_label.config(text=miles)
+    miles_count_label.config(text=f"{miles}")
 
 
 window = Tk()
 window.title("Mile to Km Converter")
-window.minsize(width=200, height=140)
 window.config(padx=20, pady=20)
 
 is_equal_label = Label(text="is equal to", font=("Courier", 10, "normal"))
